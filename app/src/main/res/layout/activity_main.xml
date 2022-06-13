@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_string_lua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="String Luo (load the Lua script from string)"
+        app:layout_constraintBottom_toTopOf="@id/btn_file_lua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_file_lua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Luo (load the Lua script from file or input stream)"
+        app:layout_constraintTop_toBottomOf="@+id/btn_string_lua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_file_custom_lua" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_file_custom_lua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Custom Luo (make match function from Java into Lua)"
+        app:layout_constraintTop_toBottomOf="@+id/btn_file_lua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_file_input_to_luo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_file_input_to_luo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Input To Luo (Send Input to Lua program)"
+        app:layout_constraintTop_toBottomOf="@+id/btn_file_custom_lua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_file_custom_input_to_luo" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_custom_input"
+        android:layout_width="100dp"
+        android:inputType="number"
+        android:text="1"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_file_custom_input_to_luo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_file_custom_input_to_luo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Input To Luo (Send Custom Input to Lua program)"
+        app:layout_constraintTop_toBottomOf="@+id/btn_file_input_to_luo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
